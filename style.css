@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f2f4f7;
+  color: #333;
+}
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Utility classes start */
+.text-center {
+  text-align: center;
+}
+.text-red {
+  color: red;
+}
+.bg-green {
+  background-color: #4caf50;
+  color: white;
+}
+.relative {
+  position: relative;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+}
+/* Utility classes end */
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f4f7;
+}
+.steps {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.steps h1 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 35px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 7px 17px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"]:focus + label {
+  top: -24px;
+  left: 0;
+  color: #6e6d6d;
+  font-size: 14px;
+}
+
+.input-box {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.input-box label {
+  position: absolute;
+  top: 8px;
+  left: 17px;
+  color: #999;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.step-btn {
+  margin-top: 20px;
+}
+
+.username-error {
+  color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 20px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.username-error.active {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .steps {
+    width: 100%;
+    padding: 20px;
+  }
+  .steps h1 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+  input[type="text"] {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+  }
+  input[type="text"] + label {
+    font-size: 14px;
+    left: 10px;
+    top: 6px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .steps {
+    width: 100%;
+    padding: 15px;
+  }
+  .steps h1 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  input[type="text"] {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  input[type="text"] + label {
+    font-size: 12px;
+  }
+}

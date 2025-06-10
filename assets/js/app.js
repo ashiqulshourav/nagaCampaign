@@ -9,7 +9,6 @@ username.addEventListener('input', (e) => {
 });
 
 username.addEventListener('blur', (e) => {
-    console.log(e.target.value, "blur event triggered");
   // check if the input is empty
     if (e.target.value != '') {
         $(e.target).parent().addClass('valid');
@@ -22,13 +21,21 @@ button.addEventListener('click', (e) => {
     e.preventDefault();
 
     // getting step number
-    const stepNum = $('.step.active').data('step');
+    const stepNum = $('.step.active').data('step') || 1;
 
     if(stepNum == 1) {
         // check if the input is empty
         if (username.value != '') {
-            $('.step.active').removeClass('active').next().addClass('active');  
-            $('.steps button').text('Next');
+            if(username.value.length < 3) {
+                $('.username-error').text('Please enter a username with at least 3 characters');
+                $(username).parent().removeClass('valid');
+                $(username).parent().addClass('invalid');
+                $(username).focus();
+            } else {
+                $('.step.active').removeClass('active').next().addClass('active');  
+                $('.steps button').text('Ok');
+            }
+            
         } else {
             $('.username-error').text('Username cannot be empty');
             $(username).parent().removeClass('valid');
@@ -36,4 +43,8 @@ button.addEventListener('click', (e) => {
             $(username).focus();
         }
     }
+
+    // if(stepNum == 2) {
+
+    // }
 });

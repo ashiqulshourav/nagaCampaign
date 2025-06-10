@@ -48,3 +48,13 @@ button.addEventListener('click', (e) => {
 
     // }
 });
+
+// Naga Animation
+const nagaImg = document.querySelector('.naga-anim img');
+console.log(nagaImg);
+
+for(let i = 0; i < 100; i++) {
+    const clone = nagaImg.cloneNode(true);
+    clone.style.animationDelay = `${i * 0.1}s`;
+    document.querySelector('.naga-anim').appendChild(clone);
+}

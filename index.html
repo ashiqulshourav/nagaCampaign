@@ -19,22 +19,22 @@
     <div class="container">
       <form action="#">
         <div class="steps">
-          <div class="step step-1">
+          <div class="step step-1 active" data-step="1">
             <h1 class="text-center">
               <span class="text-red">Naga</span> Campaign Registration
             </h1>
             <div class="input-box relative name">
-              <input type="text" id="username" />
+              <input type="text" id="username" name="username" />
               <label for="username" class="">Enter your name or username</label>
               <p class="username-error">This username is not available</p>
             </div>
           </div>
-          <div class="step step-2"></div>
+          <div class="step step-2" data-step="2"></div>
           <div class="step step-1"></div>
           <div class="step step-1"></div>
 
           <div class="step-btn text-center">
-            <button class="btn text-center bg-green">Next</button>
+            <button class="btn text-center bg-green">Submit</button>
           </div>
         </div>
       </form>
@@ -49,5 +49,10 @@
         <a href="https://www.naga.devnotation.com">website</a>.
       </p> -->
     </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

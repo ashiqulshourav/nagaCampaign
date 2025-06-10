@@ -93,18 +93,6 @@ input[type="text"]:focus {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"]:focus + label {
-  top: -24px;
-  left: 0;
-  color: #6e6d6d;
-  font-size: 14px;
-}
-
-.input-box {
-  position: relative;
-  padding-bottom: 20px;
-}
-
 .input-box label {
   position: absolute;
   top: 8px;
@@ -114,6 +102,18 @@ input[type="text"]:focus + label {
   line-height: 24px;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
+}
+.input-box.valid label,
+.input-box input[type="text"]:focus + label {
+  top: -24px;
+  left: 0;
+  color: #6e6d6d;
+  font-size: 14px;
+}
+
+.input-box {
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .step-btn {
@@ -135,8 +135,21 @@ input[type="text"]:focus + label {
   -o-transition: all 0.2s ease-in-out;
 }
 
-.username-error.active {
+.input-box.invalid .username-error {
   opacity: 1;
+}
+
+.input-box.invalid input[type="text"] {
+  border-color: red;
+  box-shadow: inset 0 1px 2px rgba(255, 0, 0, 0.2);
+}
+
+.input-box.invalid label {
+  color: red;
+}
+
+.input-box.invalid input[type="text"]:focus + label {
+  color: red;
 }
 
 @media only screen and (max-width: 500px) {

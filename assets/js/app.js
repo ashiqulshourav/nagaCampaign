@@ -51,10 +51,11 @@ button.addEventListener('click', (e) => {
 
 // Naga Animation
 const nagaImg = document.querySelector('.naga-anim img');
-console.log(nagaImg);
 
-for(let i = 0; i < 100; i++) {
+for(let i = 0; i < 10; i++) {
+    const randomNaga = Math.floor(Math.random() * 10) + .1; // Random number between 1 and 10
+    console.log(randomNaga);
     const clone = nagaImg.cloneNode(true);
-    clone.style.animationDelay = `${i * 0.1}s`;
+    clone.style.animationDelay = `${randomNaga * 0.5}s`;
     document.querySelector('.naga-anim').appendChild(clone);
 }
